@@ -1,0 +1,65 @@
+﻿@model EventManagement.Models.VenueAllDetails
+
+    <link href="~/css/IndexStyle.css" rel="stylesheet" />
+    @{
+        ViewData["Title"] = "ShowSearchedVenue";
+    }
+
+    <h3>Searched Venue</h3>
+    <h4 class="text-danger">@ViewBag.Error</h4>
+@if (Model != null)
+{
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Event_Place)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Event_Place)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Event_Type)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Event_Type)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Guest_Capability)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Guest_Capability)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Per_Guest_Cost)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Per_Guest_Cost)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DJ_Cost)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DJ_Cost)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Stage_Cost)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Stage_Cost)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Mike_Speaker_Cost)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Mike_Speaker_Cost)
+            </dd>
+        </dl>
+    </div>
+}
+<br />
+<br />
+<br />
+    <div>
+        <a asp-action="Search">Back to Search</a>
+    </div>

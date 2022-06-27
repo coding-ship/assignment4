@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAS7B9mRKggUmTL4zNR7sG8gAAAAACAAAAAAAQZgAAAAEAACAAAACMbGSrZsesfZGOy99323mLdPV591gaRVvrs7nK4jTAhQAAAAAOgAAAAAIAACAAAABmwZqyX/YAUmyeaOrgxJRSZwRzA/+zz1x8DKg3/GrsB4AAAAC//BhRdXWktAX5OfNp2FtQcRumab8SGCWK0u4lct7yVTkshjZxTMLfoS9cibX9VB50R1J5ypU1fO6tqn7hcTd9ZDZN8vkCk1dPWhlihLPbXy9oi8yh1IWcSbqJsCMXJocTe5zZnyJf7n+0x5V5KGOIYyNO9PzqzwABPZrWXjb2nEAAAADF2WOjhsPZ2UNfyTdGMhBE9ayu+1THOrrH7pOY/z/EkOTOzJFkiXb/mf68J/jfrpF5YRN6CjcGgBJXfupeHSJg</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="constr">
+      <Value>Data Source=tcp:library-management3-systemdbserver.database.windows.net,1433%3bInitial Catalog=Library_Management_System3_db%3bUser Id=jasneetkaur%3bPassword=Jk123456789!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

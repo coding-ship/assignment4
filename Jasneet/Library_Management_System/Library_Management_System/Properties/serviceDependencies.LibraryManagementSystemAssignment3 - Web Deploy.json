@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/library-management3-systemdbserver/databases/Library_Management_System3_db",
+      "type": "mssql.azure",
+      "connectionId": "constr",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

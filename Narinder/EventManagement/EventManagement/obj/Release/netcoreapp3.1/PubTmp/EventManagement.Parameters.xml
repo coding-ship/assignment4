@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="EventManagementAssignment3" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\SHUBHAM\\Desktop\\C\#\ Assignment\ 3\ code\ push\\New\ folder\ \(2\)\\Event\\EventManagement\\EventManagement\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

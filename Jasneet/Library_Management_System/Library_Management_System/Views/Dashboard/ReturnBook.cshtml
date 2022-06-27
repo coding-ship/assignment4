@@ -1,0 +1,65 @@
+﻿<link href="~/css/IndexStyle.css" rel="stylesheet" />
+@model Library_Management_System.Models.IssueDetails
+
+@{
+    ViewData["Title"] = "ReturnBook";
+}
+
+<h3>Return Book</h3>
+
+<h3>Are you sure you want to return this?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book_Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book_Author)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book_Author)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User_Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone_Number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone_Number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Issue_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Issue_Date)
+        </dd>
+    </dl>
+
+    <form asp-action="ReturnBook">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Return" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+<br />
+<br />

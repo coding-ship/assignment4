@@ -1,0 +1,41 @@
+﻿@model EventManagement.Models.VenueDetails
+    <link href="~/css/IndexStyle.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Venue Additional Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label for="Event_Place">Event Place</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Event_Place)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="DJ_Cost">DJ Cost</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DJ_Cost)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="Stage_Cost">Stage Cost</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Stage_Cost)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="Mike_Speaker_Cost">Mike & Speaker Cost</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mike_Speaker_Cost)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditDetails" asp-route-id="@Model.Event_Place">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

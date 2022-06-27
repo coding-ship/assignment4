@@ -1,0 +1,91 @@
+﻿<link href="~/css/IndexStyle.css" rel="stylesheet" />
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@model IEnumerable<Library_Management_System.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+ @if (SignInManager.IsSignedIn(User))
+    {
+        <p>
+            <a asp-action="AddNewUser" asp-controller="Dashboard">Register New User</a>&nbsp   &nbsp
+            <a asp-action="IssuedBook" asp-controller="Dashboard">Issued Book</a>&nbsp  &nbsp
+            <a asp-action="Create" asp-controller="Dashboard">Add New Book</a>&nbsp  &nbsp
+            <a asp-action="Users" asp-controller="Dashboard">Active Users</a>&nbsp&nbsp
+        </p>
+    }
+        <h1>Books</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <label for="Book_Id">Book Id</label>
+
+                    </th>
+                    <th>
+                        <label for="Book_Name">Book Name</label>
+                    </th>
+                    <th>
+                        <label for="Author">Author</label>
+                    </th>
+                    <th>
+                        <label for="Language">Language</label>
+                    </th>
+                    <th>
+                        <label for="No_of_pages">Pages</label>
+                    </th>
+                    <th>
+                        <label for="Price">Price</label>
+                    </th>
+                    <th>
+                        <label for="No_of_Books">Quantity Remaining</label>
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Book_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Book_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Language)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.No_of_pages)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.No_of_Books)
+                    </td>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-controller="Dashboard" asp-route-id="@item.Book_Id">Edit</a> |
+                            <a asp-action="Details" asp-controller="Dashboard" asp-route-id="@item.Book_Id">Details</a> |
+                            <a asp-action="Delete" asp-controller="Dashboard" asp-route-id="@item.Book_Id">Delete</a>   |
+                            <a asp-action="IssueBook" asp-controller="Dashboard" asp-route-id="@item.Book_Id">Issue Book</a> |
+                        </td>
+                    }
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    

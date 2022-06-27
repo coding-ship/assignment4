@@ -1,0 +1,63 @@
+﻿<link href="~/css/IndexStyle.css" rel="stylesheet" />
+@model Library_Management_System.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Book Details</h1>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label for="Book_Id">Book Id</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book_Id)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="Book_Name">Book Name</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book_Name)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="Author">Author</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="Language">Language</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="No_of_pages">Pages</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.No_of_pages)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="Price">Price</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            <label for="No_of_Books">Quantity Remaining</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.No_of_Books)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Book_Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+<br />
+<br />

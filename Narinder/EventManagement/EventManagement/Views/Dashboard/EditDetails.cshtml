@@ -1,0 +1,48 @@
+﻿@model EventManagement.Models.VenueDetails
+    <link href="~/css/IndexStyle.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "EditDetails";
+}
+
+<h1>Edit Venue Sub-Details</h1>
+<h3 class="text-success">@ViewBag.Message</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label for="Event_Place">Event Place</label>
+                <input asp-for="Event_Place" class="form-control" readonly />
+                <span asp-validation-for="Event_Place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="DJ_Cost">DJ Cost</label>
+                <input asp-for="DJ_Cost" class="form-control" />
+                <span asp-validation-for="DJ_Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Stage_Cost">Stage Cost</label>
+                <input asp-for="Stage_Cost" class="form-control" />
+                <span asp-validation-for="Stage_Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Mike_Speaker_Cost">Mike & Speaker Cost</label>
+                <input asp-for="Mike_Speaker_Cost" class="form-control" />
+                <span asp-validation-for="Mike_Speaker_Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Dashboard</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EventManagement.Models.Venue>
+<link href="~/css/IndexStyle.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Venue</h1>
+
+<p>
+    <a asp-action="Create">Create New Venue</a>&nbsp  &nbsp
+    <a asp-action="Search">Search Venue</a>
+
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label for="Event_Place">Event Place</label>
+            </th>
+            <th>
+                <label for="Event_Type">Event Type</label>
+            </th>
+            <th>
+                <label for="Guest_Capability">Guest Capability</label>
+            </th>
+            <th>
+                <label for="Per_Guest_Cost">Per Guest Cost</label>
+            </th>
+            <th>
+                <label>Actions</label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event_Place)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event_Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Guest_Capability)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Per_Guest_Cost)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Event_Place">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Event_Place">More Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Event_Place">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
